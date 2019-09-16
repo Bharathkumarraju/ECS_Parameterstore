@@ -28,3 +28,4 @@ SSM URN - arn:aws:ssm:ap-southeast-1:172586632398:parameter/<name>
 
 ### use above values in contianer defintions as below.
 
+![Contianer_Definiton](container_definition.png)
