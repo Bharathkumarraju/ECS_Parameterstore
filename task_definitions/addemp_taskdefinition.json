@@ -1,0 +1,138 @@
+{
+  "ipcMode": null,
+  "executionRoleArn": "arn:aws:iam::172586632398:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "dnsSearchDomains": null,
+      "logConfiguration": {
+        "logDriver": "json-file",
+        "secretOptions": null,
+        "options": null
+      },
+      "entryPoint": null,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "protocol": "tcp",
+          "containerPort": 80
+        }
+      ],
+      "command": null,
+      "linuxParameters": null,
+      "cpu": 0,
+      "environment": [],
+      "resourceRequirements": null,
+      "ulimits": null,
+      "dnsServers": null,
+      "mountPoints": [],
+      "workingDirectory": null,
+      "secrets": [
+        {
+          "valueFrom": "arn:aws:ssm:ap-southeast-1:172586632398:parameter/app/miyazaki/DATABASE",
+          "name": "DATABASE"
+        },
+        {
+          "valueFrom": "arn:aws:ssm:ap-southeast-1:172586632398:parameter/app/miyazaki/DBHOST",
+          "name": "DBHOST"
+        },
+        {
+          "valueFrom": "arn:aws:ssm:ap-southeast-1:172586632398:parameter/app/miyazaki/DBPORT",
+          "name": "DBPORT"
+        },
+        {
+          "valueFrom": "arn:aws:ssm:ap-southeast-1:172586632398:parameter/app/miyazaki/DBPWD",
+          "name": "DBPWD"
+        },
+        {
+          "valueFrom": "arn:aws:ssm:ap-southeast-1:172586632398:parameter/app/miyazaki/DBUSER",
+          "name": "DBUSER"
+        }
+      ],
+      "dockerSecurityOptions": null,
+      "memory": null,
+      "memoryReservation": null,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "172586632398.dkr.ecr.ap-southeast-1.amazonaws.com/addemp:latest",
+      "startTimeout": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": true,
+      "links": null,
+      "hostname": null,
+      "extraHosts": null,
+      "pseudoTerminal": null,
+      "user": null,
+      "readonlyRootFilesystem": null,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": null,
+      "name": "AddEmp"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": "64",
+  "taskRoleArn": "arn:aws:iam::172586632398:role/employee-application-task-role",
+  "compatibilities": [
+    "EC2"
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:172586632398:task-definition/AddEmpTaskDef:5",
+  "family": "AddEmpTaskDef",
+  "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.secrets.ssm.environment-variables"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.task-eni"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.logging-driver.json-file"
+    }
+  ],
+  "pidMode": null,
+  "requiresCompatibilities": [
+    "EC2"
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "1024",
+  "revision": 5,
+  "status": "ACTIVE",
+  "inferenceAccelerators": null,
+  "proxyConfiguration": null,
+  "volumes": []
+}
