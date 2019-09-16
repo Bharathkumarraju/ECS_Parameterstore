@@ -22,8 +22,9 @@ lets say you have /dev/app/<app1>
                   /prod/app/<app3> 
  we can restrict users not to access prod app parameter variables etc...
 ```
+In order to access the parameter store variable we have to use ARN's like below.
 
-SSM URN - arn:aws:ssm:ap-southeast-1:172586632398:parameter/<name>
+SSM ARN - arn:aws:ssm:ap-southeast-1:172586632398:parameter/<name>
 
 
 - /app/miyazaki/DBHOST : XXXXXXXXX  -> arn:aws:ssm:ap-southeast-1:172586632398:parameter/app/miyazaki/DBHOST
@@ -36,6 +37,6 @@ SSM URN - arn:aws:ssm:ap-southeast-1:172586632398:parameter/<name>
 
 - /app/miyazaki/DATABASE : XXXXX  -> arn:aws:ssm:ap-southeast-1:172586632398:parameter/app/miyazaki/DATABASE
 
-### use above values in contianer defintions as below.
+### use above values in contianer defintions as below that are defined in Parameter store
 
 ![Contianer_Definiton](container_definition.png)
