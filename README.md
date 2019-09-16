@@ -13,6 +13,16 @@ http://AWSEcsApplicationLoadbalancer-2024742083.ap-southeast-1.elb.amazonaws.com
 
 To access the each parameter inside the container definition use ARN as below for each environment.
 
+The beauty of this parameter store is, it is hierarchical means you can give permission based on `/app` level `/app/miyazaki` level or `/app/miyazaki/<parameter>` level
+
+That means we cab give permission to certain users to access certain hierarchy etc...
+```
+lets say you have /dev/app/<app1>
+                  /stage/app/<app2>
+                  /prod/app/<app3> 
+ we can restrict users not to access prod app parameter variables etc...
+```
+
 SSM URN - arn:aws:ssm:ap-southeast-1:172586632398:parameter/<name>
 
 
